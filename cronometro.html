@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .fundo{
+            background-image: linear-gradient(blue, grey, white);
+            height: 100vh;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .cronometro{
+            background-color: rgb(0,0,0,0.8);
+            left: 50%;
+            top: 50%;
+            color: white;
+            position: absolute;
+            transform: translate(-50%,-50%);  
+            border-radius: 15px;          
+        }
+        .botaovolta{
+            width: 200px;
+            height: 100px;
+            margin: 50px;
+            margin-right: 55px;
+            cursor: pointer;
+            background-color: rgb(190, 0, 190);
+            font-size: 40px;
+            border-radius: 15px;
+            border: none;
+        }
+        .botaoiniciar{
+            width: 200px;
+            height: 100px;
+            margin: 48px;
+            cursor: pointer;
+            background-color: rgb(0, 255, 0);
+            font-size: 50px;
+            border-radius: 15px;
+            border: none;
+        }
+        .botaopausar{
+            width: 200px;
+            height: 100px;
+            margin: 48px;
+            cursor: pointer;
+            background-color: red;
+            font-size: 50px;
+            border-radius: 15px;
+            border: none;
+        }
+        .botaozerar{
+            width: 200px;
+            height: 100px;
+            margin: 48px;
+            cursor: pointer;
+            background-color: yellow;
+            font-size: 50px;
+            border-radius: 15px;
+            border: none;
+        }
+
+        .botaozerar:hover{
+            background-color: rgb(143, 143, 0);
+        }
+
+        .botaoiniciar:hover{
+            background-color: rgb(1, 94, 16);
+        }
+
+        .botaopausar:hover{
+            background-color: rgb(122, 2, 2);       
+        }
+        .botaovolta:hover{
+            background-color: rgb(112, 4, 112);       
+        }
+
+        #relogio{
+            
+            margin-left: 55px;
+            background-color: white;
+            width: 600px;
+            height: 150px;
+            color: black;
+            font-size: 100px;
+            padding: 100px;
+            border-radius: 15px;
+            float: left
+        
+        }
+        #marcarvolta{
+            
+            margin-right: 38px;
+            background-color: white;
+            width: 250px;
+            height: 280px;
+            color: black;
+            font-size: 50px;
+            padding-top: 0px;
+            padding-bottom: 75px;
+            border-radius: 15px;
+            float: right;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+        
+        <div class="cronometro">
+            <h1>Cronômetro</h1>
+
+            <h3 id="relogio">00:00:00</h3>  
+            <h3 id="marcarvolta"> 
+                
+                <p>Voltas</p>
+                <p id="umavolta"></p>
+                <p id="duasvolta"></p>
+                <p id="tresvolta"></p>
+                <p id="quatrovolta"></p>
+                <p id="cincovolta"></p>
+                
+              
+            </h3>
+                  
+           
+            <table>
+                <tr>
+                    <td><button onclick="iniciar();" class="botaoiniciar">Iniciar</button></td>
+                    <td><button onclick="parar();" class="botaopausar">Pausar</button></td>
+                    <td><button onclick="zerar();" class="botaozerar">Zerar</button></td>
+                    <td><button onclick="imprimirvolta();" class="botaovolta">Marcar Volta</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./cronometro.js"></script>
+</body>
+</html>
