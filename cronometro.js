@@ -30,9 +30,10 @@ function zerar() {
     hh = 00;
     mm = 00;
     ss = 00;
+    marcarvoltas = 0;
 
     document.getElementById('relogio'). innerHTML = "00:00:00"
-    document.getElementById('marcarvolta'). innerHTML = "VOLTA"
+    document.getElementById('marcarvolta'). innerHTML = "Voltas"
     button.disabled = false
 
     
