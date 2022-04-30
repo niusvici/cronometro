@@ -30,13 +30,19 @@ function zerar() {
     hh = 00;
     mm = 00;
     ss = 00;
-    marcarvoltas = 0;
-
-    document.getElementById('relogio'). innerHTML = "00:00:00"
-    document.getElementById('marcarvolta'). innerHTML = "Voltas"
-    button.disabled = false
-
     
+   
+
+    document.getElementById('relogio'). innerHTML = "00:00:00";
+    document.getElementById('marcarvoltas'). innerHTML = "Voltas";
+    document.getElementById('umavolta'). innerHTML = "";
+    document.getElementById('duasvolta'). innerHTML = "";
+    document.getElementById('tresvolta'). innerHTML = "";
+    document.getElementById('quatrovolta'). innerHTML = "";
+    document.getElementById('cincovolta'). innerHTML = "";
+    button.disabled = false;
+    marcarvoltas=0;
+
 }
 function timer() {
     ss++
@@ -60,19 +66,20 @@ function imprimirvolta(){
     }else if(marcarvoltas == 1){
         document.getElementById('duasvolta'). innerHTML = "2ª" + doisdigitos(hh) + ":" + doisdigitos(mm) + ":" +  doisdigitos(ss);
         marcarvoltas++
-}else if(marcarvoltas == 2){
+    }else if(marcarvoltas == 2){
     document.getElementById('tresvolta'). innerHTML = "3ª" + doisdigitos(hh) + ":" + doisdigitos(mm) + ":" +  doisdigitos(ss);
     marcarvoltas++
-}else if(marcarvoltas == 3){
+    }else if(marcarvoltas == 3){
     document.getElementById('quatrovolta'). innerHTML = "4ª" + doisdigitos(hh) + ":" + doisdigitos(mm) + ":" +  doisdigitos(ss);
     marcarvoltas++
-}else if(marcarvoltas == 4){
+    }else if(marcarvoltas == 4){
     document.getElementById('cincovolta'). innerHTML = "5ª" + doisdigitos(hh) + ":" + doisdigitos(mm) + ":" +  doisdigitos(ss);
     marcarvoltas++
-}else{
+    }else{
     alert("Apenas 5 voltas por enquanto")
-}
+    }
 
 }
+ 
  
 
